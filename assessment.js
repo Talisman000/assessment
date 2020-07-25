@@ -30,8 +30,13 @@ assessmentButton.onclick = function () {
 
   const anchor = document.createElement("a");
   const hrefValue =
-    "https://twitter.com/intent/tweet?button_hashtag=" + encodeURIComponent("あなたのいいところ診断") + "&ref_src=twsrc%5Etfw";
+    "https://twitter.com/intent/tweet?button_hashtag=" +
+    encodeURIComponent("あなたのいいところ診断") +
+    "&ref_src=twsrc%5Etfw";
+  const data_urlValue =
+    "https://talisman000.github.io/assessment/assessment.html";
   anchor.setAttribute("href", hrefValue);
+  anchor.setAttribute('data-url',data_urlValue);
   anchor.className = "twitter-hashtag-button";
   anchor.setAttribute("data-text", result);
   anchor.innerText = "Tweet #あなたのいいところ診断";
